@@ -1,4 +1,21 @@
-# **Micro-ROS Adafruit ESP32 feather 環境建置**
+# **Adafruit ESP32 feather無線壓力感測器傳輸系統**
+
+## 摘要 
+使用兩塊ESP32，其中一塊做為8個力感測器資料接收端並透過WIFI發送到另一塊ESP32，ESP32接收端同時透過Micro-ROS將力感測器資料傳送至ROS2系統當中，經測試力感測器資料接收頻率約62Hz，符合設計要求。
+![image](https://hackmd.io/_uploads/SJmdfKgqC.png)
+
+
+## Github檔案內容簡述
+ESP32_Transmiiter: ESP32發送端
+
+ESP32_Receiver: ESP32接收端
+
+ESP32_Read_Mac_Address: 因使用MAC Address方式傳輸，需要先讀取接收端MAC Address，後發送端設定
+
+Press_Sensor_Layout: 電路設計圖以及PCB Layout
+
+
+## 系統環境架設
 
 **Material Request:**
 1. Adafruit EPS32 feather
@@ -6,10 +23,13 @@
 
 
 **Environment:**
+
 1.Ubuntu 22.04 humble
-2.Ros
-3.Ros2
-4.Micro-Ros
+
+2.Ros2
+
+3.Micro-Ros
+
 5.Arduino IDE
 
 
